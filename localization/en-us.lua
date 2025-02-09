@@ -47,6 +47,15 @@ return {
                     "of {C:item,T:c_poke_twisted_spoon}#2#"
                 } 
             },
+            b_poke_professordeck = {
+                name = "Professor's Deck",
+                text = {
+                    "Jokers from the same",
+                    "species can appear",
+                    "multiple times, and",
+                    "{C:red}#1#{} discards.",
+                } 
+            },
             --Fun fact: this and luminious deck had their descriptions mixed up
             b_poke_obituarydeck = {
                 name = "Obituary Deck",

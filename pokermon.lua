@@ -85,7 +85,7 @@ end
 
 --Load pokemon file
 local pfiles = NFS.getDirectoryItems(mod_dir.."pokemon")
-
+pfiles = {"pokejokers_1.lua"}
 for _, file in ipairs(pfiles) do
   sendDebugMessage ("The file is: "..file)
   local pokemon, load_error = SMODS.load_file("pokemon/"..file)

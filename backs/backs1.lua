@@ -75,7 +75,21 @@ local telekineticdeck = {
 	atlas = "pokedeck",
 } 
 
-local dList = {luminousdeck, obituarydeck, telekineticdeck}
+local professordeck = {
+	name = "professordeck",
+	key = "professordeck",  
+	order = 21,
+  unlocked = true,
+  discovered = true,
+	config = {discards = -1, dollars = 9000, vouchers = { "v_overstock_norm", "v_overstock_plus"}},
+  loc_vars = function(self, info_queue, center)
+    return {vars = {self.config.discards}}
+  end,
+	pos = { x = 3, y = 0 },
+	atlas = "pokedeck",
+} 
+
+local dList = {luminousdeck, obituarydeck, telekineticdeck, professordeck}
 
 if pokermon_config.pokeballs then
   table.insert(dList, 1, pokemondeck)
