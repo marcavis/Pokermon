@@ -331,7 +331,7 @@ pattern = "(v.unlocked ~= false or v.rarity == 4) then"
 position = "after"
 payload = '''
   if v.name == "weedle" then 
-    print("this code stops running after weedle is bought)
+    print("this code stops running after weedle is bought")
     print("weedle got culled by vanilla")
     print("weedle is in yes flag pool? "..(v.yes_pool_flag or "empty"))
     print("weedle is in no flag pool? "..(v.no_pool_flag or "empty"))
