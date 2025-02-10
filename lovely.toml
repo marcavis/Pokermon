@@ -320,21 +320,13 @@ end
 '''
 match_indent = true
 
-
-
-
-#Testing whether repeat pokemon get culled
+#Letting the professordeck give repeated pokemon; smods also changes this line
 [[patches]]
 [patches.pattern]
 target = "functions/common_events.lua"
-pattern = "(v.unlocked ~= false or v.rarity == 4) then"
-position = "after"
+pattern = 'elseif not (G.GAME.used_jokers[v.key] and not pool_opts.allow_duplicates and not next(find_joker("Showman"))) and'
+position = "at"
 payload = '''
-  if v.name == "weedle" then 
-    print("this code stops running after weedle is bought")
-    print("weedle got culled by vanilla")
-    print("weedle is in yes flag pool? "..(v.yes_pool_flag or "empty"))
-    print("weedle is in no flag pool? "..(v.no_pool_flag or "empty"))
-  end
-  '''
+elseif not (G.GAME.used_jokers[v.key] and not pool_opts.allow_duplicates and not next(find_joker("Showman")) and not G.GAME.selected_back.name == "professordeck") and
+'''
 match_indent = true

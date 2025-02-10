@@ -81,9 +81,9 @@ local professordeck = {
 	order = 21,
   unlocked = true,
   discovered = true,
-	config = {discards = -1, dollars = 9000, vouchers = { "v_overstock_norm", "v_overstock_plus"}},
+	config = {consumables = {'c_poke_repeatball'}},
   loc_vars = function(self, info_queue, center)
-    return {vars = {self.config.discards}}
+    return {vars = {}}
   end,
 	pos = { x = 3, y = 0 },
 	atlas = "pokedeck",

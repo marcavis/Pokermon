@@ -583,14 +583,8 @@ get_family_keys = function(cardname)
 end
 
 pokemon_in_pool = function (self)
-  if self.name == "weedle" then print ("weedle spotted") end
   if next(find_joker("Showman")) or next(find_joker("pokedex")) then 
-      if self.name == "weedle" then print ("weedle allowed by ????") end
       return true
-  end
-  if G.GAME.selected_back.name == "professordeck" then
-    if self.name == "weedle" then print ("prof allowed weedle") end
-    return true
   end
   local name
   if not self.name and self.ability.name then
@@ -609,7 +603,6 @@ pokemon_in_pool = function (self)
       end
     end
     if in_family and found_other then
-      print("disallowed by family")
       return false
     end
     found_other = false
@@ -826,7 +819,6 @@ create_random_poke_joker = function(pseed, stage, pokerarity, area, poketype)
     poke_key = "j_poke_caterpie"
   end
   create_args.key = poke_key
-  print(poke_key, #poke_keys)
 
   return SMODS.create_card(create_args)
 end

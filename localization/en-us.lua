@@ -50,10 +50,10 @@ return {
             b_poke_professordeck = {
                 name = "Professor's Deck",
                 text = {
-                    "Jokers from the same",
-                    "species can appear",
-                    "multiple times, and",
-                    "{C:red}#1#{} discards.",
+                    "Jokers or consumables",
+                    "of the same type",
+                    "can appear",
+                    "multiple times."
                 } 
             },
             --Fun fact: this and luminious deck had their descriptions mixed up
@@ -2886,6 +2886,15 @@ return {
                 text = {
                     "Create a random",
                     "{C:attention}Stage 1 Joker{} card",
+                    "{C:inactive}(Must have room)"
+                },
+            },
+            c_poke_repeatball = {
+                name = "Repeatball",
+                text = {
+                    "Create a random",
+                    "{C:attention}Joker{} card",
+                    "from a type you already have.",
                     "{C:inactive}(Must have room)"
                 },
             },
